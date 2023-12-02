@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+/* Add this to your App.css or any other stylesheet file */
+table{
+  border-collapse: collapse;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+th,td{
+  border: 1px solid #ddd;
+  border-spacing: 0px;
+  padding: 10px 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pagination {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 20px 0;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #343a40;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination li {
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.pagination button:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination li.active button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* styles.css */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 50%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+.toggle-button {
+  padding: 8px 15px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.toggle-button.active {
+  background-color: #e0a800;
+  color: #343a40;
+  border-color: #e0a800;
 }
